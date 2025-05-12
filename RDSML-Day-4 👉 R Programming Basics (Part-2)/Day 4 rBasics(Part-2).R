@@ -3,7 +3,7 @@
 # 2. String - "Kaifi Sultana" / 'Kaifi Sultana'
 # 3. Logical 
 
-a = 11
+a = 11 # Ctrl+enter to declare variable and store it
 b = 7.19
 class (a)
 class (b)
@@ -29,8 +29,8 @@ print(y > x)
 print (y >= x)
 
 # Logical Operators in R
-# && Logical Operator
-# || Logical Operator
+# && Logical Operator #and operator result only comes true when both sides true, otherwise false
+# || Logical Operator #or operator result is always true unless both sides are false
 
 4 == 4 && 5 == 5
 x != y || x == y
@@ -50,5 +50,5 @@ y = 4 ^ 3
 print(y)
 
 11/5
-11%%5
-11 %/% 5
+11%%5 # modulo operator
+11 %/% 5 # division result without fraction or floating
