@@ -26,7 +26,7 @@ mean(samples3)
 
 cl4 <- mean(sample(r,4))
 
-# We want to calculate sampling mean of 1000 values 
+# We want to calculate 1000 sampling mean from 10,000 values 
 # by using the for loop
 
 for (i in 1:1000) {
