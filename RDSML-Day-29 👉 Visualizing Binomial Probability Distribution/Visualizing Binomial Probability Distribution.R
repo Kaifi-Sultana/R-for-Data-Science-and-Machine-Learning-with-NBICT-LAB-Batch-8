@@ -45,5 +45,9 @@ visualize.binom(stat=4, size=10, prob=0.5)
 # we need grid lines to visualize exactly 4 times heads
 grid(nx=NULL, ny=NULL, col="grey",lty="dotted")
 
+# to visualize this with visualize function,
+library(visualize)
+visualize.binom(stat=c(4,4), size=10, prob=0.5, section="bounded")
+
 # in the plot, mean and SD of binomial distribution is mentioned.
 # the formula can be seen in chat gpt. 
