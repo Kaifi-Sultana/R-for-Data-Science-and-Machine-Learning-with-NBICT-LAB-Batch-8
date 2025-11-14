@@ -127,3 +127,23 @@ group_letters <- cld(emmeans(m, ~ fert * irr), Letters = lsetters)
 print(group_letters)
 
 # By lettering, we can identify sig diff between any 2 groups. 
+
+# Publication-ready ANOVA table
+library(broom)
+library(kableExtra)
+library(car)
+
+# ANOVA Table
+aov_tab <- Anova(m, type = 3) %>%
+  tidy() %>%
+  mutate(p.value = signif(p.value, 3))
+
+print(aov_tab)
+
+# For well furnished APA style ANOVA table: 
+kbl(aov_tab, digits = 3, caption = "Two-way ANOVA") %>%
+  kable_classic(full_width = FALSE, html_font = "Times New Roman")
+
+# Codes can be polished by using AI. Shared in instructor's repository
+# Rscript name: polished.R
+# Independent variable must be categorical to run Two-way ANOVA.
